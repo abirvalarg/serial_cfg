@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Serial configurator</title>
+		<script src="/static/main.js" defer></script>
+	</head>
+	<body>
+		<div>
+			<p>Current scheme: <span id="scheme"></span></p>
+			<form method="post" action="/scheme">
+				<input type="file" name="scheme" id="schemeFile">
+				<input type="submit" value="Set" id="setSchemeBtn">
+				<p id="schemeMsg" style="display: none;"></p>
+			</form>
+			<p>Current interface: <span id="interface"></span></p>
+			<form action="/open" method="post" id="interfaceForm">
+				<input type="text" name="path" id="interfaceIn">
+				<input type="submit" value="Open" id="interfaceBtn">
+				<p id="interfaceMsg" style="display: none;"></p>
+			</form>
+		</div>
+		<hr>
+		<p id="errorMsg"></p>
+		<div id="fieldPlace"></div>
+	</body>
+</html>
